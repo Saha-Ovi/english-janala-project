@@ -109,13 +109,15 @@
 
       <!-- Banner section -->
       <section
-        class="banner flex flex-col-reverse  md:flex-row justify-between items-center w-11/12 mx-auto gap-8"
+        class="banner flex flex-col-reverse md:flex-row justify-between items-center w-11/12 mx-auto gap-8"
       >
-        <div class="banner-content flex-1 space-y-4 ">
+        <div class="banner-content flex-1 space-y-4">
           <h2 class="font-bold text-5xl text-center md:text-left">
             <span class="text-sky-400">English</span> is Easy!!
           </h2>
-          <p class="font-bangla text-[#18181B] text-lg text-center md:text-left">
+          <p
+            class="font-bangla text-[#18181B] text-lg text-center md:text-left"
+          >
             আজ থেকেই আপনার ভাষা শেখার যাত্রা শুরু করুন। আপনি যদি নতুন হন অথবা
             আপনার দক্ষতা বাড়াতে চান, আমাদের Interactive Lessons আপনাকে নিয়ে যাবে
             অন্য একটি Level এ
@@ -123,7 +125,7 @@
 
           <div class="card bg-base-100 w-full max-w-sm shrink-0">
             <div class="card-body p-0 m-0">
-              <fieldset class="fieldset  ">
+              <fieldset class="fieldset">
                 <input
                   type="text"
                   class="input"
@@ -143,25 +145,48 @@
       </section>
     </header>
     <main>
-        <!-- Learn Vocabulary -->
-        <section class="py-10">
-            <h2 class="font-bold text-5xl text-center"><span class="text-sky-400">Let's</span> Learn Vocabularies</h2>
-            <div id="lesson-container" class="flex justify-center gap-8 flex-wrap py-8">
-             <!-- dynamically lesson button added-->
-            </div>
-        </section>
-        <!-- word container -->
-         <!-- {
-"id": 3,
-"level": 2,
-"word": "Cautious",
-"meaning": "সতর্ক",
-"pronunciation": "কশাস"
-}, -->
-         <section id="word-container" class="bg-gray-200 w-11/12 my-8 mx-auto grid grid-cols-3 gap-5 py-8 px-5">
+      <!-- Learn Vocabulary -->
+      <section class="py-10">
+        <h2 class="font-bold text-5xl text-center">
+          <span class="text-sky-400">Let's</span> Learn Vocabularies
+        </h2>
+        <div
+          id="lesson-container"
+          class="flex justify-center gap-8 flex-wrap py-8"
+        >
+          <!-- dynamically lesson button added-->
+        </div>
+      </section>
+      <!-- word container -->
+      <section
+        id="word-container"
+        class="bg-gray-200 w-11/12 my-8 mx-auto grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 py-8 px-5"
+      >
+        <!-- level word push -->
+        <!-- Before level word push -->
+        <div class="py-6 px-3 text-center col-span-full font-bangla space-y-5">
+          <p class="text-2xl text-medium text-gray-600">
+            আপনি এখনো কোন Lesson Select করেন নি
+          </p>
+          <p class="text-4xl text-bold">একটি Lesson Select করুন।</p>
+        </div>
+      </section>
 
-         <!-- level word push -->
-         </section>
+      <!-- Open the modal using ID.showModal() method -->
+
+      <!-- <button class="btn" onclick="my_modal_5.showModal()">open modal</button> -->
+      <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
+        <div class="modal-box">
+          <h3 class="text-lg font-bold">Hello!</h3>
+          <p class="py-4">Press ESC key or click the button below to close</p>
+          <div class="modal-action">
+            <form method="dialog">
+              <!-- if there is a button in form, it will close the modal -->
+              <button class="btn">Close</button>
+            </form>
+          </div>
+        </div>
+      </dialog>
     </main>
     <footer></footer>
     <script src="./index.js"></script>
